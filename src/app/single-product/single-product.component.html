@@ -1,0 +1,23 @@
+<div class="container-fluid">
+      <div class="row p-5">
+            <div class="col col-md-8">
+              <div class="row p-5">
+                      <div class="col-8  align-items-center py-5">
+
+                        <h2>Title:- {{productData.title}}</h2>
+                        <h3>Price:- {{productData.price}}</h3>
+                        <p>Description:- {{productData.description}}</p>
+                        <h3>Rating:-{{productData.rating}}</h3>
+                        <h3>Stock:-  {{productData.stock}}</h3>
+                        <h3>Brand:- {{productData.brand}}</h3>
+                        <p>category:- {{productData.category}}</p>
+                        <button mat-button color="primary" class="btnclr" (click)="AddProductCart()">Add To Cart</button>
+                      </div>
+                      <div class="col-4">
+                            <img [src]="productData.images[0]" alt="" >
+                      </div>
+                    </div>
+            </div>
+
+      </div>
+</div>

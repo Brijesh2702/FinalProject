@@ -1,0 +1,26 @@
+
+  <mat-card-title class="btn"> <button mat-fab color="primary" (click)="DeleteUserCart()" aria-label="Example icon button with a delete icon">
+    <mat-icon>delete</mat-icon>
+  </button></mat-card-title>
+
+
+
+<mat-card class="example-card mt-2" *ngFor="let cart of productCart">
+
+  <mat-card-title-group>
+    <mat-card-title>{{cart['title']}}</mat-card-title>
+    <mat-card-subtitle>Price: {{cart['price']}}</mat-card-subtitle>
+    <!-- <img mat-card-sm-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" > -->
+    <mat-card-subtitle>Quantity: {{cart['quantity']}}</mat-card-subtitle>
+    <mat-card-subtitle><del>{{cart['total']}} &#x20B9;</del><span class="price">{{cart['discountedPrice']}}&#x20B9;</span> <span class="percentage">{{cart['discountPercentage']}}%</span></mat-card-subtitle>
+  </mat-card-title-group>
+  <mat-card-content>
+
+  </mat-card-content>
+</mat-card>
+<!-- discountPercentage
+:
+15.46
+discountedPrice
+:
+316 -->

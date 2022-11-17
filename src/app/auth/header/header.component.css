@@ -1,0 +1,40 @@
+.bg-clr{
+  width: 100%;
+    background-color: white;
+    /* margin: 0.5rem; */
+
+}
+.cate
+{
+  height: 30rem;
+  list-style: none;
+  /* display: flex; */
+  overflow-y:scroll;
+  text-align: left;
+  overflow-wrap: normal;
+  /* overflow-x: none; */
+}
+ul{
+  background-color: #d9fce3;
+  text-align: center;
+  padding-left: 0;
+}
+li{
+
+  margin: 0.5rem 0rem;
+}
+.cat-a{
+  color: black;
+  text-decoration: none;
+  /* text-align: center; */
+  background-color: #ccf0d5;
+  padding:0.2rem 0.6rem;
+  cursor: pointer;
+}
+
+.cat-a:hover
+{
+  color: white;
+  background-color: #78877c;
+  transition: all 500ms;
+}

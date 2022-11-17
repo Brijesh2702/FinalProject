@@ -1,0 +1,14 @@
+.percentage{
+  font-weight: bold;
+  font-size: 1rem;
+  padding: 0rem 0rem;
+}
+.price{
+  font-weight: bold;
+  font-size: 1.5rem;
+  padding: 0rem 1rem;
+}
+.btn{
+  display: flex;
+  justify-content: end;
+}

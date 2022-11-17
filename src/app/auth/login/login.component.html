@@ -1,0 +1,51 @@
+<div class="container-fluid border bg-img ">
+
+        <div class="row align-items-center justify-content-center">
+          <div class="col bg-clr  rounded">
+            <h2 class="text-white align-items-center pt-3">Sign in</h2>
+          </div>
+                <div class="col-12 bg-white rounded bg2-img">
+
+
+                      <form class="example-form" [formGroup]="loginForm">
+                      <div class="col text-center ">
+
+
+                          <mat-form-field class="example-full-width" appearance="fill" class="bg-white w-100">
+                            <mat-label>UserName</mat-label>
+                            <input type="text" matInput formControlName="username" placeholder="Ex. pat@example.com">
+                            <mat-error *ngIf="loginFormval.username.hasError('username') && !loginFormval.username.hasError('required')">
+                              Please enter a valid UserName
+                            </mat-error>
+                            <mat-error *ngIf="loginFormval.username.hasError('required')">
+                              UserName is <strong>required</strong>
+                            </mat-error>
+                          </mat-form-field>
+
+
+                      </div>
+
+                      <div class="col pt-3">
+                        <mat-form-field appearance="fill" class="bg-white w-100">
+                          <mat-label >Enter your password</mat-label>
+                          <input  matInput [type]="hide ? 'password' : 'text'" formControlName="password">
+                          <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+                            <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                          </button>
+                          <mat-error *ngIf="loginFormval.password.hasError('password') && !loginFormval.password.hasError('required')">
+                            Please enter a valid password
+                          </mat-error>
+                          <mat-error *ngIf="loginFormval.password.hasError('required')">
+                            Password is <strong>required</strong>
+                          </mat-error>
+                        </mat-form-field>
+                      </div>
+                      <div class="col text-center pt-3">
+                        <button mat-button color="primary" class="bg-primary text-white px-5 fs-5" (click)="signIn()">Sign In</button>
+                      </div>
+                    </form>
+
+                </div>
+        </div>
+
+</div>

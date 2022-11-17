@@ -1,0 +1,36 @@
+
+<div class="container-fluid bg-color pt-5">
+  <div class="row justify-content-center">
+    <div class="spinner" *ngIf="showspinner">
+      <mat-spinner></mat-spinner>
+
+    </div>
+      <div class="col-2">
+          <app-header (clickevent)="getcat($event)"></app-header>
+      </div>
+      <div  class="col-10">
+        <div class="row">
+        <mat-card  class="example-card col-3 m-1 cards"  (click)="OnclickProduct(product.id)" *ngFor="let product of ProductData">
+          <mat-card-header>
+            <div mat-card-avatar class="example-header-image"></div>
+            <mat-card-title>Title :- {{product.title}}</mat-card-title>
+            <mat-card-subtitle>price:- {{product.price}}</mat-card-subtitle>
+          </mat-card-header>
+          <!-- {{product["images"][0]}} -->
+          <img class="h-25 w-75 img" mat-card-image [src]="product.images[0]" alt="Photo of a Shiba Inu"/>
+          <mat-card-content>
+            <p>
+            {{product.description}}
+            </p>
+            <p>{{product.discountPercentage}}</p>
+            <p>{{product.rating}}</p >
+              <p>{{product.stock}}</p>
+              <p>{{product.brand}}</p>
+              <p>{{product.category }}</p>
+          </mat-card-content>
+
+        </mat-card>
+      </div>
+      </div>
+</div>
+</div>

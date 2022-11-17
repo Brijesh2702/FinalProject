@@ -1,0 +1,16 @@
+
+<div class="container-fluid bg-clr ">
+    <div class="row">
+          <div class="col ">
+                <ul class="cate border justify-content-center" >
+                    <li  class="cat-a text-center" ><button class="cat-a text-center border-0" (click)="sendCat('all')">All</button></li>
+                      <li *ngFor="let cat of Categories" class="cat-a text-center" >
+                         <!-- <a href="" > {{cat}}</a> -->
+                         <button (click)="sendCat(cat)"  class="cat-a text-center border-0">
+                          {{cat}}
+                         </button>
+                      </li>
+                </ul>
+          </div>
+    </div>
+</div>

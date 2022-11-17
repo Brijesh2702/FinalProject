@@ -1,0 +1,37 @@
+
+<div class="form-body bg-color">
+  <div class="row">
+      <div class="form-holder">
+          <div class="form-content">
+              <div class="form-items">
+                  <h3>Register Today</h3>
+                  <p>Fill in the data below.</p>
+                  <form class="requires-validation" novalidate [formGroup]="postForm">
+
+                      <div class="col-md-12">
+                         <input class="form-control" type="text" placeholder="Title"  formControlName="title">
+                         <span *ngIf="postFormval['title'].invalid && postFormval['title'].touched" class="text-white mt-2">Title is Required</span>
+                      </div>
+                      <div class="col-md-12">
+                        <input class="form-control" type="text"  placeholder="UserId" formControlName="userId">
+                        <span *ngIf="postFormval['userId'].invalid && postFormval['userId'].touched" class="text-white mt-2">UserId is Required</span>
+                     </div>
+                     <div class="col-md-12">
+                      <input class="form-control" type="text"  placeholder="Body" formControlName="body">
+                      <span *ngIf="postFormval['body'].invalid && postFormval['body'].touched" class="text-white mt-2">body is Required</span>
+                   </div>
+                   <div class="col-md-12">
+                    <input class="form-control" type="text"  placeholder="reactions" formControlName="reactions">
+                    <span *ngIf="postFormval['reactions'].invalid && postFormval['reactions'].touched" class="text-white mt-2">Reactions is Required</span>
+                 </div>
+
+
+                      <div class="form-button mt-3 text-center">
+                          <button id="submit" type="submit" class="btn btn-primary" (click)="UpdatePosts()"> Update Post</button>
+                      </div>
+                  </form>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
